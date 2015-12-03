@@ -1,0 +1,12 @@
+---
+skills:
+- id: 3
+  name: Skillss
+  status: maggie sucks
+- id: 4
+  name: Newest Skill
+  status: skillz
+- id: 5
+  name: Basketball
+  status: Sports!
+total: 5
