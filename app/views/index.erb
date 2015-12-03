@@ -1,4 +1,5 @@
-<h1>My Skills</h1>
+<img src="../images/Napoleon.jpg">
+<h1>SWEET SKILLS</h1> 
 <% @skills.each do |skill| %>
     <h3><%= skill.id %>: <a href="/skills/<%= skill.id %>">
       <%= skill.name %></a></h3>
@@ -9,3 +10,6 @@
         <input type="submit" value="delete" />
       </form> 
 <% end %>
+
+    <ul><a class="waves-effect waves-light btn-large" href="/skills"><i class="material-icons left"></i>Skills</a></ul>
+    <ul><a class="waves-effect waves-light btn-large" href="/skills/new"><i class="material-icons left"></i>Add Skill</a></ul>
