@@ -11,7 +11,11 @@ class SkillInventory
   end
 
   def self.database
-    @database ||= YAML::Store.new("db/skill_inventory")
+    if ENV["RACK_ENV"] == "test"            #local testing
+      @database ||= YAML::Store.new("db/task_manager_test")
+    else                                    #devlopment (shotgun)
+      @database ||= YAML::Store.new("db/task_manager")
+    end 
   end
 
   def self.raw_skills
@@ -45,4 +49,11 @@ class SkillInventory
       database["skills"].delete_if { |skill| skill["id"] == id }
     end 
   end 
+
+  def self.delete_all
+    database.transaction do
+      database['skills'] = []
+      database['total'] = 0
+    end
+  end
 end

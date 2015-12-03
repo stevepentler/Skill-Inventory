@@ -1,12 +1,17 @@
 ---
 skills:
-- id: 3
-  name: Skillss
-  status: maggie sucks
-- id: 4
-  name: Newest Skill
-  status: skillz
-- id: 5
-  name: Basketball
-  status: Sports!
+  name: skillzzz1
+  status: I got 1 skillzzz
+- id: 7
+  name: skillzzz2
+  status: I got 2 skillzzz
+- id: 8
+  name: skillzzz3
+  status: I got 3 skillzzz
+- id: 9
+  name: skillzzz4
+  status: I got 4 skillzzz
+- id: 10
+  name: skillzzz5
+  status: I got 5 skillzzz
 total: 5

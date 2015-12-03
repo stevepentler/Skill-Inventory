@@ -6,12 +6,13 @@ require 'minitest/pride'
 require 'capybara'
 
 class Minitest::Test 
-  def teardown
-    SkillInventory.delete_all 
+  def teardown   
+    SkillInventory.delete_all
   end
 end
 
 Capybara.app = SkillInventoryApp
 
 class FeatureTest < Minitest::Test
-end 
+  include Capybara::DSL
+end
