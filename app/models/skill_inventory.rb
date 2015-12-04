@@ -50,6 +50,8 @@ class SkillInventory
   end 
 
   def self.update(id, data)
+    database.from(:skills).where(id: id).update(data)
+
     # database.transaction do 
     #   target = database["skills"].find { |data| data["id"] == id }
     #   target["name"] = data[:name]
