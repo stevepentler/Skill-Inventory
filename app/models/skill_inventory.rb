@@ -60,9 +60,9 @@ class SkillInventory
   end 
 
   def self.delete(id)
-    database.transaction do  
-      database["skills"].delete_if { |skill| skill["id"] == id }
-    end 
+    database.from(:skills).where(id: id).delete 
+    #   database["skills"].delete_if { |skill| skill["id"] == id }
+    # end 
   end 
 
   # def self.delete_all
