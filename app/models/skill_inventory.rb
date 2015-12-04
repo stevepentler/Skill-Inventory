@@ -1,4 +1,5 @@
 require 'yaml/store'
+require 'pry'
 
 class SkillInventory
   def self.database
@@ -34,28 +35,26 @@ class SkillInventory
   #   end 
   # end 
 
-  def self.raw_skills
-    database.from(:skills)
-  end 
+  def self.all
+    raw_data = database.from(:skills).to_a
+    raw_data.map { |data| Skill.new(data) }
+  end
 
-  def self.all 
-    raw_skills.map { |data| Skill.new(data) }
-  end 
-
-  def self.raw_task(id)
-    raw_skills.find { |skill| skill["id"] == id }
+  def self.raw_skills(id)
+    raw_skills.find { |skill| skill[:id] == id }
   end 
 
   def self.find(id)
-    Skill.new(raw_task(id))
+    data = database.from(:skills).where(id: id).to_a.first
+    Skill.new(data)
   end 
 
   def self.update(id, data)
-    database.transaction do 
-      target = database["skills"].find { |data| data["id"] == id }
-      target["name"] = data[:name]
-      target["status"] = data[:status]
-    end 
+    # database.transaction do 
+    #   target = database["skills"].find { |data| data["id"] == id }
+    #   target["name"] = data[:name]
+    #   target["status"] = data[:status]
+    # end 
   end 
 
   def self.delete(id)
