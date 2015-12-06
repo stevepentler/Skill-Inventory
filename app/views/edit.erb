@@ -1,7 +1,8 @@
+
 <h1>Edit a Skill</h1>
 <form id="edit_form" action="/skills/<%=@skill.id %>" method="post"> 
   <input type="hidden" name="_method" value="put">
   <h4>Skill: </h4><textarea name='skill[name]'><%= @skill.name %></textarea><br/>
   <h4>Status: </h4><textarea name='skill[status]'><%= @skill.status %></textarea><br/>
-  <button type='submit'/ value="edit_button" >
+  <button class="waves-effect waves-light btn-large" type='submit' value="edit_button" >
 </form>

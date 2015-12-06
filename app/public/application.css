@@ -1,1 +1,7 @@
-require 'models'
+body {
+  background-color: yellow;
+}
+
+h1 {
+  color: #FF69B4;
+}
