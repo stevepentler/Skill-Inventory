@@ -12,17 +12,14 @@ class UserEditsSkill < FeatureTest
     click_link("edit")
     #And I get redirected to the edit screen
     #And I enter title
-    assert_equal '/skills/1/edit', current_path
-    within("#edit_form") do 
-      fill_in('skill[name]', :with => "modified name")
+    fill_in('skill[name]', :with => "modified name")
     #And I enter description
-      fill_in('skill[status]', :with => "modified status")
+    fill_in('skill[status]', :with => "modified status")
     #And I click submit 
-      click_button("edit_button")
+    click_button("submit")
     #I am redirected to task id
     #Then the title and description have been modified
-      assert page.has_content?("modified name")
-      assert page.has_content?("modified status")
-    end 
+    assert page.has_content?("modified name")
+    assert page.has_content?("modified status")
   end
 end 

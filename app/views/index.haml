@@ -9,7 +9,7 @@
       %h3 
         =skill.name
       %a{:href => "/skills/#{skill.id}"} 
-      %h4 
+      %h4
         =skill.status
       %a.edit.waves-effect.waves-light.btn-large{:href => "/skills/#{skill.id}/edit", :value => "edit"}edit
       %form{ :action => "/skills/#{skill.id}", :method => "post"}

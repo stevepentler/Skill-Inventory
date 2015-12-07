@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='/css/materialize.min.css' media='screen,projection' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href='/application.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <title>SKILLz</title>
+  </head>
+  <body>
+    <div class='row'>
+      <div class='col s6'>
+        <img id='napoleon_dynamite' src='/images/Napoleon.jpg'>
+        <img id='kip' src='/images/Kip.jpg'>
+      </div>
+      <div class='col s6'>
+        <h1>SWEET COMPUTER SKILLS</h1>
+        <a class='waves-effect waves-light btn-large co' href='/skills/new' id='add_skills'>Add Your Own Skills</a>
+        <h3>
+          Numchuck!
+        </h3>
+        <a href='/skills/283'></a>
+        <h4>
+          Swing
+        </h4>
+        <a class='edit waves-effect waves-light btn-large' href='/skills/283/edit' value='edit'>edit</a>
+        <form action='/skills/283' method='post'>
+          <input name='_method' type='hidden' value='delete'>
+            <input class='delete waves-effect waves-light btn-large' type='submit' value='delete'>
+          </input>
+        </form>
+      </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js' type='text/javascript'></script>
+    <script src='/js/materialize.min.js' type='text/javascript'></script>
+  </body>
+</html>

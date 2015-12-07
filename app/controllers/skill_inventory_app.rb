@@ -39,7 +39,5 @@ class SkillInventoryApp < Sinatra::Base
     SkillInventory.delete(id.to_i)
     redirect '/skills'
   end 
-
-
-
+  
 end
