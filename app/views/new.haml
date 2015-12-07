@@ -1,14 +1,30 @@
 .container
-.row 
-  .col.s5
-    %img{:src => "/images/Technology.jpg"}
-  .col.s7
-    %h1 Add a new skill
-    %h4 New Skill: 
-    %form{:action => "/skills", :method => "post"}
-    %input{ :name => "skill[name]", :type => 'text'}
-    %h4 New Status:
-    %textarea{:name => "skill[status]", :type => 'text'}
-    %input.waves-effect.waves-light.btn-large{:type => "submit", :value => "submit"}
-%hr
-%a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage
+  .row 
+    .col.s6
+      %img{:src => "/images/Technology.jpg"}
+    .col.s6
+      %h1 Add a new skill
+      %form{:action => "/skills", :method => "post"}
+        %h4 New Skill: 
+        %input{ :name => "skill[name]", :type => 'text'}
+        %h4 New Status:
+        %textarea{:name => "skill[status]", :type => 'text'}
+        / %input{ :status => "skill[status]", :type => 'text'}
+        %br/
+        %input.waves-effect.waves-light.btn-large{:type => "submit", :value => "submit"}
+  %a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage
+
+/ .container
+/ .row 
+/   .col.s5
+/     %img{:src => "/images/Technology.jpg"}
+/   .col.s7
+/     %h1 Add a new skill
+/     %h4 New Skill: 
+/     %form{:action => "/skills", :method => "post"}
+/     %input{ :name => "skill[name]", :type => 'text'}
+/     %h4 New Status:
+/     %textarea{:name => "skill[status]", :type => 'text'}
+/   %input.waves-effect.waves-light.btn-large{:type => "submit", :value => "submit"}
+/ %hr
+/ %a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage
