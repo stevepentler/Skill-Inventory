@@ -1,14 +1,16 @@
 .container
   .row
-    .col.s5
-    %h1 Edit a Skill
-    %form{ :id => "edit_form", :action => "/skills/#{@skill.id}", :method => "post"}
-      %input{ :type => "hidden", :name => "_method", :value => "put"}
-      %h4 Skill: 
-      %br "#{@skill.name}" 
-      %input{ :name =>'skill[name]', :type => 'text'}
-      %h4 Status: 
-      %br "#{@skill.status}"
-      %input{:name => "skill[status]", :type => 'text'}
-      %input.waves-effect.waves-light.btn-large{ :type =>'submit', :value =>"submit"} 
+    .col.s6
+      %h1 Edit a Skill
+      %img{:id => "time_machine", :src => "/images/TimeMachine.jpg"}
+    .col.s6
+      %form{ :id => "edit_form", :action => "/skills/#{@skill.id}", :method => "post"}
+        %input{ :type => "hidden", :name => "_method", :value => "put"}
+        %h4 Skill: 
+        %br "#{@skill.name}" 
+        %input{ :name =>'skill[name]', :type => 'text'}
+        %h4 Status: 
+        %br "#{@skill.status}"
+        %input{:name => "skill[status]", :type => 'text'}
+        %input.waves-effect.waves-light.btn-large{ :type =>'submit', :value =>"submit"} 
   %a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage

@@ -27,3 +27,7 @@ h4 {
   background-color: black;
   color: white;
 }
+
+#time_machine {
+  max-height: 250px;
+}
