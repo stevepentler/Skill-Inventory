@@ -28,6 +28,18 @@ h4 {
   color: white;
 }
 
+#napoleon_dynamite {
+  width: 80%;
+}
+
+#kip {
+  width: 80%;
+}
+
+#technology {
+  max-width: 450px;
+}
+
 #time_machine {
   max-height: 250px;
 }
