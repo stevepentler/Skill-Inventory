@@ -12,7 +12,7 @@
       assert page.has_content?("Numchuck!")
       
       #And I click the delete button
-      find("#delete_button_1").click_button("delete")
+      click_button("delete")
       
       refute page.has_content?("Numchuck")
       assert '/skills', current_path
