@@ -6,7 +6,7 @@ class UserCreatesNewSkill < FeatureTest
     #When I visit the dashboard
     visit '/'
     #And I click the add task button
-    click_link("Add Skill")
+    click_link("Add Your Own Skills")
     #And I am redirected to the new task page
     assert_equal '/skills/new', current_path
     #And I enter the title

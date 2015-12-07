@@ -1,17 +1,18 @@
+require 'haml'
 class SkillInventoryApp < Sinatra::Base
 
   get '/' do 
     @skills = SkillInventory.all
-    erb :index
+    haml :index
   end 
 
   get '/skills' do
     @skills = SkillInventory.all
-    erb :index
+    haml :index
   end
 
   get '/skills/new' do
-    erb :new
+    haml :new
   end 
 
   post '/skills' do
@@ -21,12 +22,12 @@ class SkillInventoryApp < Sinatra::Base
 
   get '/skills/:id' do |id|
     @skill = SkillInventory.find(id.to_i)
-    erb :show
+    haml :show
   end 
 
   get '/skills/:id/edit' do |id|  #or params[:id] in block, #id isn't specific to symbol, if multiple go in order
     @skill = SkillInventory.find(id.to_i)
-    erb :edit
+    haml :edit
   end 
 
   put '/skills/:id' do |id|
@@ -38,5 +39,7 @@ class SkillInventoryApp < Sinatra::Base
     SkillInventory.delete(id.to_i)
     redirect '/skills'
   end 
+
+
 
 end

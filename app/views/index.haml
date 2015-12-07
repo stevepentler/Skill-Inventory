@@ -1,0 +1,21 @@
+.row
+  .col.s5
+    %img{:src => "/images/Napoleon.jpg"}
+  .col.s7 
+    %h1 SWEET COMPUTER SKILLS
+    %a.waves-effect.waves-light.btn-large.co{:id => "add_skills", :href=> "/skills/new"}Add Your Own Skills
+    -@skills.each do |skill|
+      %h3 
+        =skill.name
+      %a{:href => "/skills/#{skill.id}"} 
+      %h4 
+        =skill.status
+      %a.edit.waves-effect.waves-light.btn-large{:href => "/skills/#{skill.id}/edit", :value => "edit"}edit
+      %form{:action => "/skills/#{skill.id}", :method => "post", :id => "delete_button"}
+        %input{:name => "_method", :type => "hidden", :value => "delete"}
+          %input.delete.waves-effect.waves-light.btn-large{:type => "submit", :value => "delete"}
+      / %form{:action =>"/skills/#{skill.id}", :method => "post"}
+      / %a.waves-effect.waves-light.btn-large.co{:href => "/skills/#{skill.id}/edit"}edit
+      / %input{:type => "hidden", :name => "_method", :value => "delete"}
+      /   %input.waves-effect.waves-light.btn-large.co{:type =>"submit", :value => "delete"}
+    / %i.medium.material-icons{ :href => '/'}home 

@@ -1,0 +1,17 @@
+.container
+  %h1 Add a new skill
+  %form{:action => "/skills", :method => "post"}
+    %h4 New Skill: 
+    %input{ :name => "skill[name]", :type => 'text'}
+    %h4 New Status:
+    %textarea{:name => "skill[status]", :type => 'text'}
+    / %input{ :status => "skill[status]", :type => 'text'}
+    %br/
+    %input.waves-effect.waves-light.btn-large{:type => "submit", :value => "submit"}
+
+    / %input.btn.waves-effect.waves-light{ :type =>'submit', :value =>"submit"}
+
+    / %input{:type => "hidden", :name => "_method", :value => "post"}/
+    / %a.waves-effect.waves-light.btn-large.co{:type =>"submit", :value => "submit"}submit 
+
+    / <button <a class="btn-large waves-light" type='submit' value='submit'/>submit</a>

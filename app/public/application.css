@@ -5,3 +5,15 @@ body {
 h1 {
   color: #FF69B4;
 }
+
+h3 { 
+  color: #996633;
+}
+
+h4 {
+  color: #996633;
+}
+.btn-large { 
+  background: #00E5EE;
+  color: #FF69B4;
+}

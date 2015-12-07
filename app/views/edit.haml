@@ -1,0 +1,13 @@
+.container
+  .row
+    .col.s5
+    %h1 Edit a Skill
+    %form{ :id => "edit_form", :action => "/skills/#{@skill.id}", :method => "post"}
+      %input{ :type => "hidden", :name => "_method", :value => "put"}
+      %h4 Skill: 
+      %br "#{@skill.name}" 
+      %input{ :name =>'skill[name]', :type => 'text'}
+      %h4 Status: 
+      %br "#{@skill.status}"
+      %textarea{:name => "skill[status]", :type => 'text'}
+      %input.waves-effect.waves-light.btn-large{ :type =>'submit', :value =>"submit"} 
