@@ -2,6 +2,10 @@ body {
   background-color: yellow;
 }
 
+.img { 
+  
+}
+
 h1 {
   color: #FF69B4;
   text-shadow: 2px 2px orange;
@@ -16,6 +20,7 @@ h4 {
   color: #996633;
   text-shadow: 2px 2px orange;
 }
+
 .btn-large { 
   background: #00E5EE;
   color: #FF69B4;

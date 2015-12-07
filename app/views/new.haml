@@ -1,12 +1,14 @@
 .container
-  %h1 Add a new skill
-  %form{:action => "/skills", :method => "post"}
+.row 
+  .col.s5
+    %img{:src => "/images/Technology.jpg"}
+  .col.s7
+    %h1 Add a new skill
     %h4 New Skill: 
+    %form{:action => "/skills", :method => "post"}
     %input{ :name => "skill[name]", :type => 'text'}
     %h4 New Status:
     %textarea{:name => "skill[status]", :type => 'text'}
-    / %input{ :status => "skill[status]", :type => 'text'}
-    %br/
     %input.waves-effect.waves-light.btn-large{:type => "submit", :value => "submit"}
-
-  %a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage
+%hr
+%a.btn-large.material-icon{ :href => '/', :id => 'homepage'}homepage

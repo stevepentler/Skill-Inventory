@@ -12,6 +12,6 @@
       %h4 
         =skill.status
       %a.edit.waves-effect.waves-light.btn-large{:href => "/skills/#{skill.id}/edit", :value => "edit"}edit
-      %form{:action => "/skills/#{skill.id}", :method => "post", :id => "delete_button"}
-        %input{:name => "_method", :type => "hidden", :value => "delete"}
-          %input.delete.waves-effect.waves-light.btn-large{:type => "submit", :value => "delete"}
+      %form{ :action => "/skills/#{skill.id}", :method => "post"}
+        %input{ :name => "_method", :type => "hidden", :value => "delete"}
+          %input.delete.waves-effect.waves-light.btn-large{:id => "delete_button_1", :type => "submit", :value => "delete"}
